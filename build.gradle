@@ -6,7 +6,6 @@ plugins {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-user_input = System.getProperty(‘EnvOption’)
 
 war{
 	archiveName 'hello-fiserv.war'
