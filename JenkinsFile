@@ -1,0 +1,13 @@
+node("master"){
+  stage('Pre-Build'){
+    tool name: '1.8.111', type: 'jdk'
+  }
+  stage('build'){
+    sh 'git config core.fileMode false'
+    sh 'chmod +x ./gradlew'
+    
+    sh'./gradlew clean build --refresh-dependencies'
+    
+    archiveArtifacts 'builds/libs/*'
+  }
+}
