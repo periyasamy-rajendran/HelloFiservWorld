@@ -1,0 +1,27 @@
+plugins {
+    id 'war'
+    id 'org.gretty' version '2.2.0' 
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+user_input = System.getProperty(‘EnvOption’)
+
+war{
+	archiveName 'hello-fiserv.war'
+
+}
+
+repositories {
+    jcenter()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+	//compile files("C:/Program Files/Java/jre1.8.0_231/lib/tool.jar")
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    testCompile 'junit:junit:4.12'
+}
+
+ 
