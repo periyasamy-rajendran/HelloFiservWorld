@@ -17,7 +17,7 @@ war {
 }
 
 wrapper {
-    gradleVersion = '4.2'
+    gradleVersion = '5.0'
     distributionUrl = distributionUrl.replace("bin", "all")
 }
 task moveEar(type: Copy){
