@@ -16,10 +16,10 @@ war {
 
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.0'
+wrapper {
+    gradleVersion = '4.2'
+    distributionUrl = distributionUrl.replace("bin", "all")
 }
-
 task moveEar(type: Copy){
 	dependsOn build
 	from 'build/libs/hello-fiserv.war'
