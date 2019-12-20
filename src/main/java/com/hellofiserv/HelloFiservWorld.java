@@ -35,17 +35,8 @@ public class HelloFiservWorld extends HttpServlet {
 		String env_input = properties.getProperty("user_parameter");
 		
 		PrintWriter out = response.getWriter();
-		if(env_input.equalsIgnoreCase("DEV1")){
-			out.print("<html><body><h1 align='center'>" + properties.getProperty("dev1_user_input") + "</h1><h2 align='center'>" + properties.getProperty("dev1_app_label") + "</h2><h3 align='center'>" + properties.getProperty("dev1_target_env") + "</h3></body></html>");
-		}else if(env_input.equalsIgnoreCase("DEV2")){
-			out.print("<html><body><h1 align='center'>" + properties.getProperty("dev2_user_input") + "</h1><h2 align='center'>" + properties.getProperty("dev2_app_label") + "</h2><h3 align='center'>" + properties.getProperty("dev2_target_env") + "</h3></body></html>");
-		}else if(env_input.equalsIgnoreCase("QA1")){
-			out.print("<html><body><h1 align='center'>" + properties.getProperty("qa1_user_input") + "</h1><h2 align='center'>" + properties.getProperty("qa1_app_label") + "</h2><h3 align='center'>" + properties.getProperty("qa1_target_env") + "</h3></body></html>");
-		}else if(env_input.equalsIgnoreCase("QA2")){	
-			out.print("<html><body><h1 align='center'>" + properties.getProperty("qa2_user_input") + "</h1><h2 align='center'>" + properties.getProperty("qa2_app_label") + "</h2><h3 align='center'>" + properties.getProperty("qa2_target_env") + "</h3></body></html>");
-		}else{
-			out.print("<html><body><h1 align='center'>" + properties.getProperty("prod_user_input") + "</h1><h2 align='center'>" + properties.getProperty("prod_app_label") + "</h2><h3 align='center'>" + properties.getProperty("prod_target_env") + "</h3></body></html>");
-		}
+		out.print("<html><body><h1 align='center'>" + properties.getProperty("environment") + "</h1><h2 align='center'>" + properties.getProperty("displayName") + "</h2></body></html>");
+		
 	}
 
 	/**
